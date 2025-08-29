@@ -14,8 +14,9 @@
             --accent-primary: #818cf8; --accent-secondary: #c084fc;
             --pro-color: #facc15; --danger: #f87171; --success: #4ade80;
         }
-        html, body { height: 100%; overflow: hidden; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+        html { height: 100%; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); height: 100%; display: flex; justify-content: center; align-items: center; }
+        .app-wrapper { width: 100%; max-width: 450px; height: 100%; display: flex; flex-direction: column; overflow: hidden; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
         .card-bg { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 0.75rem; transition: transform 0.2s, box-shadow 0.2s; }
         .card-bg:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         .btn { transition: all 0.2s ease-in-out; border-radius: 0.5rem; font-weight: 600; }
@@ -44,7 +45,9 @@
         .pro-profile-badge { position: absolute; bottom: 5px; right: 5px; background-color: var(--pro-color); color: #1f2937; font-size: 0.6rem; font-weight: 800; padding: 2px 6px; border-radius: 99px; text-transform: uppercase; border: 2px solid var(--bg-card); }
     </style>
 </head>
-<body class="max-w-md mx-auto">
+<body>
+<div class="app-wrapper">
+
     <div id="loader" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"><div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-accent-primary"></div></div>
     
     <div id="auth-section" class="min-h-screen p-6 flex-col justify-center main-page">
