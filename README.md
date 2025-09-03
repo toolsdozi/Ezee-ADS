@@ -1,1 +1,1 @@
-# Ezee-Earning
+# Ezee-Ads
